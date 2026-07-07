@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "title": "Reluxio — Kết nối. Bán hàng. Giao hàng.",
+    "description": "Reluxio kết nối các nhà bán hàng vừa và nhỏ, cho bạn một nơi duy nhất để vận hành cửa hàng — đơn hàng, kho hàng, gian hàng online và vận chuyển."
+  },
+  "nav": {
+    "product": "Sản phẩm",
+    "features": "Tính năng",
+    "how": "Cách hoạt động",
+    "pricing": "Bảng giá",
+    "login": "Đăng nhập",
+    "startSelling": "Bắt đầu bán hàng"
+  },
+  "hero": {
+    "eyebrow": "Dành cho nhà bán hàng vừa và nhỏ",
+    "promise": "Kết nối. Bán hàng. Giao hàng.",
+    "sub": "Reluxio kết nối các nhà bán hàng vừa và nhỏ, cho bạn một nơi duy nhất để vận hành cửa hàng — đơn hàng, kho hàng, gian hàng online và vận chuyển.",
+    "ctaPrimary": "Bắt đầu bán hàng",
+    "ctaSecondary": "Khám phá sản phẩm",
+    "scrollHint": "Cuộn xuống"
+  },
+  "trust": {
+    "heading": "Hoạt động với các đơn vị vận chuyển bạn tin dùng"
+  },
+  "showcase": {
+    "heading": "Vận hành mọi thứ từ một bảng điều khiển",
+    "sub": "Đơn hàng, kho hàng, gian hàng và tài chính — không còn phải xoay giữa sổ tay, bảng tính và tin nhắn.",
+    "dashboard": "Bảng điều khiển",
+    "orders": "Đơn hàng",
+    "storefront": "Gian hàng",
+    "inventory": "Kho hàng"
+  },
+  "features": {
+    "heading": "Đủ mọi thứ một cửa hàng cần. Không thừa thứ gì.",
+    "sub": "Thiết kế theo cách các cửa hàng nhỏ thực sự vận hành.",
+    "orders": {
+      "title": "Mọi đơn hàng trên một dòng thời gian",
+      "body": "Từ lúc đặt đến lúc giao — thấy ngay trạng thái, đơn vị vận chuyển và thanh toán."
+    },
+    "inventory": {
+      "title": "Luôn biết còn gì trong kho",
+      "body": "Số lượng cập nhật theo từng đơn bán, không bao giờ bán trùng món hàng độc."
+    },
+    "storefront": {
+      "title": "Cửa hàng của bạn, online trong vài phút",
+      "body": "Gian hàng công khai gọn đẹp cho sản phẩm của bạn — không cần code, không phí cài đặt."
+    },
+    "shipping": {
+      "title": "Giao hàng với các đơn vị bạn đang dùng",
+      "body": "Tạo đơn vận chuyển với nhiều đơn vị và theo dõi tất cả ở một nơi."
+    },
+    "customers": {
+      "title": "Nhớ từng khách hàng",
+      "body": "Lịch sử mua hàng và ghi chú — để khách quen luôn được chăm như khách quen."
+    },
+    "finance": {
+      "title": "Nhìn rõ dòng tiền",
+      "body": "Doanh thu, chi phí và lợi nhuận — báo cáo đơn giản, dễ hiểu."
+    }
+  },
+  "how": {
+    "heading": "Bán hàng trên Reluxio chỉ với ba bước",
+    "step1": {
+      "title": "Tạo cửa hàng",
+      "body": "Đăng ký và thiết lập hồ sơ cửa hàng trong vài phút."
+    },
+    "step2": {
+      "title": "Thêm sản phẩm & kết nối vận chuyển",
+      "body": "Nhập kho hàng và chọn các đơn vị vận chuyển bạn hợp tác."
+    },
+    "step3": {
+      "title": "Bắt đầu bán hàng",
+      "body": "Chia sẻ gian hàng và quản lý mọi đơn hàng từ một bảng điều khiển."
+    }
+  },
+  "proof": {
+    "heading": "Các nhà bán hàng đang tăng tốc cùng Reluxio",
+    "statMerchants": "nhà bán hàng tham gia",
+    "statMerchantsValue": "500+",
+    "statOrders": "đơn hàng luân chuyển",
+    "statOrdersValue": "12.000+",
+    "statCarriers": "đơn vị vận chuyển",
+    "statCarriersValue": "6",
+    "quote1": "Trước đây tôi ghi đơn vào ba cuốn sổ. Giờ tất cả nằm trên một màn hình.",
+    "quote1Author": "Minh — thời trang second-hand, Hà Nội",
+    "quote2": "Tôi dựng xong gian hàng trong một buổi tối. Hôm sau khách đã tìm thấy.",
+    "quote2Author": "Trang — đồ gia dụng, Đà Nẵng"
+  },
+  "pricing": {
+    "heading": "Bảng giá đơn giản, lớn cùng cửa hàng của bạn",
+    "sub": "Bắt đầu miễn phí. Nâng cấp khi cửa hàng sẵn sàng.",
+    "note": "Giá giai đoạn đầu — có thể thay đổi.",
+    "free": {
+      "name": "Khởi đầu",
+      "price": "0₫",
+      "period": "mãi mãi",
+      "desc": "Đủ mọi thứ để mở cửa hàng của bạn.",
+      "cta": "Bắt đầu miễn phí",
+      "f1": "Gian hàng công khai",
+      "f2": "Quản lý đơn hàng",
+      "f3": "Kho hàng cơ bản",
+      "f4": "Một đơn vị vận chuyển"
+    },
+    "premium": {
+      "name": "Premium",
+      "badge": "Phổ biến nhất",
+      "price": "199.000₫",
+      "period": "mỗi tháng",
+      "desc": "Cho những cửa hàng đang tăng tốc.",
+      "cta": "Nâng cấp Premium",
+      "f1": "Mọi thứ trong gói Khởi đầu",
+      "f2": "Tất cả đơn vị vận chuyển",
+      "f3": "Báo cáo tài chính & phân tích",
+      "f4": "Lịch sử & ghi chú khách hàng",
+      "f5": "Hỗ trợ ưu tiên"
+    }
+  },
+  "cta": {
+    "heading": "Đưa cửa hàng của bạn lên Reluxio",
+    "sub": "Gia nhập mạng lưới các nhà bán hàng cùng bán, cùng giao, cùng lớn mạnh.",
+    "primary": "Bắt đầu bán hàng",
+    "secondary": "Liên hệ với chúng tôi"
+  },
+  "footer": {
+    "tagline": "Một nơi duy nhất để vận hành cửa hàng.",
+    "product": "Sản phẩm",
+    "account": "Tài khoản",
+    "language": "Ngôn ngữ",
+    "copyright": "© {year} Reluxio. Đã đăng ký bản quyền."
+  }
+}

@@ -1,0 +1,200 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Reluxio landing — monochrome, dark-only.
+   Tokens ported from the main app design system (all chroma-0 oklch).
+--------------------------------------------------------------------------- */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
+  --color-ring: var(--ring);
+  --font-sans: var(--font-sans);
+  --font-serif: var(--font-serif);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  /* Deep black canvas, white light — no color accent anywhere. */
+  --background: oklch(0.09 0 0);
+  --foreground: oklch(0.97 0 0);
+  --muted: oklch(0.16 0 0);
+  --muted-foreground: oklch(0.68 0 0);
+  --card: oklch(0.13 0 0);
+  --card-foreground: oklch(0.97 0 0);
+  --border: oklch(1 0 0 / 10%);
+  --ring: oklch(0.556 0 0);
+  --radius: 0.625rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    @apply font-sans;
+    color-scheme: dark;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Brand motion & texture — ported from the main app.
+   Subtle, premium, fully disabled under prefers-reduced-motion.
+--------------------------------------------------------------------------- */
+@layer utilities {
+  @keyframes reluxio-rise {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes reluxio-shimmer {
+    to {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-rise {
+    animation: reluxio-rise 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .reveal-delay-1 {
+    animation-delay: 60ms;
+  }
+  .reveal-delay-2 {
+    animation-delay: 120ms;
+  }
+  .reveal-delay-3 {
+    animation-delay: 180ms;
+  }
+  .reveal-delay-4 {
+    animation-delay: 240ms;
+  }
+
+  .hover-lift {
+    transition:
+      transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
+  }
+  .hover-lift:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Fine dotted grain — barely-there texture for large surfaces. */
+  .texture-grain {
+    background-image: radial-gradient(currentColor 0.5px, transparent 0.5px);
+    background-size: 10px 10px;
+  }
+
+  /* Soft radial glow for section backdrops. */
+  .texture-aurora {
+    background-image:
+      radial-gradient(
+        60% 80% at 15% 0%,
+        color-mix(in oklch, var(--foreground) 8%, transparent),
+        transparent 60%
+      ),
+      radial-gradient(
+        50% 60% at 100% 20%,
+        color-mix(in oklch, var(--foreground) 5%, transparent),
+        transparent 55%
+      );
+  }
+
+  /* Sheen sweep behind the wordmark. */
+  .text-sheen {
+    background: linear-gradient(
+      100deg,
+      var(--foreground) 30%,
+      color-mix(in oklch, var(--foreground) 55%, var(--background)) 50%,
+      var(--foreground) 70%
+    );
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: reluxio-shimmer 6s linear infinite;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Scroll-driven section reveals — pure CSS (animation-timeline: view()),
+   zero JS. Scoped to <768px: on desktop, GSAP ScrollTrigger (ScrollFx) owns
+   these elements, and a CSS animation would win the cascade over its inline
+   styles. Unsupported browsers simply show content; reduced-motion opts out.
+--------------------------------------------------------------------------- */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) and (max-width: 767px) {
+    .section-reveal {
+      animation: reluxio-rise 1ms linear both;
+      animation-timeline: view();
+      animation-range: entry 5% entry 38%;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Carrier marquee — CSS-only infinite scroll. Two identical copies inside a
+   w-max flex track; reduced-motion swaps back to a static wrapped list.
+--------------------------------------------------------------------------- */
+@keyframes reluxio-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .animate-marquee {
+    animation: reluxio-marquee 28s linear infinite;
+  }
+  .animate-marquee:hover {
+    animation-play-state: paused;
+  }
+  .marquee-mask {
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-rise,
+  .text-sheen {
+    animation: none !important;
+  }
+  .animate-rise {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .text-sheen {
+    color: var(--foreground);
+  }
+  .hover-lift {
+    transition: box-shadow 0.2s ease;
+  }
+  .hover-lift:hover {
+    transform: none;
+  }
+}

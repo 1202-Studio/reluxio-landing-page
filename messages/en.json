@@ -1,0 +1,131 @@
+{
+  "meta": {
+    "title": "Reluxio — Connect. Sell. Ship.",
+    "description": "Reluxio connects small and medium merchants and gives you one place to run your shop — orders, inventory, storefront, and shipping."
+  },
+  "nav": {
+    "product": "Product",
+    "features": "Features",
+    "how": "How it works",
+    "pricing": "Pricing",
+    "login": "Log in",
+    "startSelling": "Start selling"
+  },
+  "hero": {
+    "eyebrow": "For small & medium merchants",
+    "promise": "Connect. Sell. Ship.",
+    "sub": "Reluxio connects small and medium merchants and gives you one place to run your shop — orders, inventory, storefront, and shipping.",
+    "ctaPrimary": "Start selling",
+    "ctaSecondary": "Explore the product",
+    "scrollHint": "Scroll"
+  },
+  "trust": {
+    "heading": "Works with the carriers you already trust"
+  },
+  "showcase": {
+    "heading": "Run everything from one dashboard",
+    "sub": "Orders, inventory, storefront, and finances — no more juggling notebooks, spreadsheets, and chat threads.",
+    "dashboard": "Dashboard",
+    "orders": "Orders",
+    "storefront": "Storefront",
+    "inventory": "Inventory"
+  },
+  "features": {
+    "heading": "Everything a shop needs. Nothing it doesn't.",
+    "sub": "Built for how small shops actually work.",
+    "orders": {
+      "title": "Every order on one timeline",
+      "body": "From placed to delivered — see status, carrier, and payment at a glance."
+    },
+    "inventory": {
+      "title": "Always know what's in stock",
+      "body": "Quantities update as you sell, so you never oversell a one-off item."
+    },
+    "storefront": {
+      "title": "Your shop, online in minutes",
+      "body": "A clean public storefront for your products — no code, no setup fees."
+    },
+    "shipping": {
+      "title": "Ship with carriers you already use",
+      "body": "Create shipping orders with multiple carriers and track them all in one place."
+    },
+    "customers": {
+      "title": "Remember every customer",
+      "body": "Purchase history and notes, so your regulars always feel like regulars."
+    },
+    "finance": {
+      "title": "See your money clearly",
+      "body": "Revenue, costs, and profit — simple reports that actually make sense."
+    }
+  },
+  "how": {
+    "heading": "Selling on Reluxio takes three steps",
+    "step1": {
+      "title": "Create your shop",
+      "body": "Sign up and set up your shop profile in minutes."
+    },
+    "step2": {
+      "title": "Add products & connect shipping",
+      "body": "Import your inventory and pick the carriers you work with."
+    },
+    "step3": {
+      "title": "Start selling",
+      "body": "Share your storefront and manage every order from one dashboard."
+    }
+  },
+  "proof": {
+    "heading": "Merchants are moving with Reluxio",
+    "statMerchants": "merchants onboarded",
+    "statMerchantsValue": "500+",
+    "statOrders": "orders flowing",
+    "statOrdersValue": "12,000+",
+    "statCarriers": "carriers supported",
+    "statCarriersValue": "6",
+    "quote1": "I used to track orders in three notebooks. Now it's one screen.",
+    "quote1Author": "Minh — second-hand fashion, Hà Nội",
+    "quote2": "Setting up my storefront took one evening. My customers found it the next day.",
+    "quote2Author": "Trang — home goods, Đà Nẵng"
+  },
+  "pricing": {
+    "heading": "Simple pricing that grows with you",
+    "sub": "Start free. Upgrade when your shop is ready for more.",
+    "note": "Early pricing — subject to change.",
+    "free": {
+      "name": "Starter",
+      "price": "0₫",
+      "period": "forever",
+      "desc": "Everything you need to open your shop.",
+      "cta": "Start free",
+      "f1": "Public storefront",
+      "f2": "Order management",
+      "f3": "Basic inventory",
+      "f4": "One shipping carrier"
+    },
+    "premium": {
+      "name": "Premium",
+      "badge": "Most popular",
+      "price": "199.000₫",
+      "period": "per month",
+      "desc": "For shops that are picking up speed.",
+      "cta": "Go Premium",
+      "f1": "Everything in Starter",
+      "f2": "All shipping carriers",
+      "f3": "Finance reports & insights",
+      "f4": "Customer history & notes",
+      "f5": "Priority support"
+    }
+  },
+  "cta": {
+    "heading": "Bring your shop online with Reluxio",
+    "sub": "Join the network of merchants who sell, ship, and grow together.",
+    "primary": "Start selling",
+    "secondary": "Talk to us"
+  },
+  "footer": {
+    "tagline": "One place to run your shop.",
+    "product": "Product",
+    "account": "Account",
+    "language": "Language",
+    "copyright": "© {year} Reluxio. All rights reserved."
+  }
+}
