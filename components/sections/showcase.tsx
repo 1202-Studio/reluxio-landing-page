@@ -115,10 +115,11 @@ function MockDashboard() {
     { icon: Store, label: "Storefront" },
     { icon: Settings, label: "Settings" },
   ];
+  // Gross profit / margin render green in the real Finance page.
   const stats = [
     { label: "Revenue", value: "128.400.000₫" },
-    { label: "Gross profit", value: "41.200.000₫" },
-    { label: "Profit margin", value: "32.1%" },
+    { label: "Gross profit", value: "41.200.000₫", positive: true },
+    { label: "Profit margin", value: "32.1%", positive: true },
     { label: "Orders", value: "47" },
   ];
 
@@ -185,7 +186,14 @@ function MockDashboard() {
           {stats.map((stat) => (
             <div key={stat.label} className="rounded-lg border border-white/8 bg-white/[0.03] p-2">
               <p className="text-[7px] text-white/50">{stat.label}</p>
-              <p className="mt-0.5 text-[11px] font-semibold">{stat.value}</p>
+              <p
+                className={cn(
+                  "mt-0.5 text-[11px] font-semibold",
+                  stat.positive && "text-emerald-400",
+                )}
+              >
+                {stat.value}
+              </p>
             </div>
           ))}
         </div>
@@ -195,10 +203,10 @@ function MockDashboard() {
             <p className="text-[9px] font-medium">Monthly revenue & profit</p>
             <div className="flex items-center gap-2 text-[7px] text-white/50">
               <span className="flex items-center gap-1">
-                <span className="h-1.5 w-1.5 rounded-[2px] bg-white/80" /> Revenue
+                <span className="h-1.5 w-1.5 rounded-[2px] bg-emerald-400" /> Profit
               </span>
               <span className="flex items-center gap-1">
-                <span className="h-1.5 w-1.5 rounded-[2px] bg-white/35" /> Profit
+                <span className="h-1.5 w-1.5 rounded-[2px] bg-amber-400" /> Revenue
               </span>
             </div>
           </div>
@@ -206,8 +214,8 @@ function MockDashboard() {
             {CHART.map((month, i) => (
               <div key={i} className="flex h-full flex-1 flex-col justify-end gap-0.5">
                 <div className="flex h-full items-end justify-center gap-px">
-                  <span className="w-1/2 rounded-t-[2px] bg-white/80" style={{ height: `${month.r}%` }} />
-                  <span className="w-1/2 rounded-t-[2px] bg-white/35" style={{ height: `${month.p}%` }} />
+                  <span className="w-1/2 rounded-t-[2px] bg-amber-400" style={{ height: `${month.r}%` }} />
+                  <span className="w-1/2 rounded-t-[2px] bg-emerald-400" style={{ height: `${month.p}%` }} />
                 </div>
                 <span className="text-center text-[6px] text-white/35">{MONTHS[i]}</span>
               </div>
