@@ -30,50 +30,83 @@ export function ScrollFx() {
     gsap.registerPlugin(ScrollTrigger);
 
     const ctx = gsap.context(() => {
-      gsap.utils.toArray<HTMLElement>("[data-fx='rise']").forEach((el) => {
-        gsap.from(el, {
-          y: 36,
-          opacity: 0,
-          duration: 0.9,
-          ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 88%" },
+      /**
+       * Reveal helper: set the start state, then animate to it on enter and
+       * `clearProps` afterwards. Unlike `gsap.from()`, this never leaves an
+       * element stuck at its start transform on a ScrollTrigger refresh — the
+       * bug that let displaced cards overlap the pricing note. `clearProps`
+       * returns each element to its natural layout (and any class-based rest
+       * tilt) once revealed, so paint and layout stay in sync.
+       */
+      const reveal = (
+        target: gsap.TweenTarget,
+        trigger: Element,
+        from: gsap.TweenVars,
+        to: gsap.TweenVars,
+      ) => {
+        gsap.set(target, from);
+        ScrollTrigger.create({
+          trigger,
+          start: "top 88%",
+          once: true,
+          onEnter: () =>
+            gsap.to(target, {
+              ...to,
+              clearProps: "transform,opacity",
+            }),
         });
+      };
+
+      gsap.utils.toArray<HTMLElement>("[data-fx='rise']").forEach((el) => {
+        reveal(
+          el,
+          el,
+          { y: 36, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.9, ease: "power3.out" },
+        );
       });
 
       gsap.utils.toArray<HTMLElement>("[data-fx='tilt']").forEach((el, i) => {
-        gsap.from(el, {
-          y: 90,
-          rotate: i % 2 ? 2.5 : -2.5,
-          scale: 0.96,
-          opacity: 0,
-          duration: 1.1,
-          ease: "power3.out",
-          scrollTrigger: { trigger: el, start: "top 86%" },
-        });
+        reveal(
+          el,
+          el,
+          { y: 90, rotate: i % 2 ? 2.5 : -2.5, scale: 0.96, opacity: 0 },
+          {
+            y: 0,
+            rotate: 0,
+            scale: 1,
+            opacity: 1,
+            duration: 1.1,
+            ease: "power3.out",
+          },
+        );
       });
 
       gsap.utils.toArray<HTMLElement>("[data-fx-group]").forEach((group) => {
         const cards = group.querySelectorAll("[data-fx='card']");
         if (!cards.length) return;
-        gsap.from(cards, {
-          y: 56,
-          opacity: 0,
-          rotate: (i) => ((i % 3) - 1) * 2, // -2°, 0°, 2° …
-          duration: 0.8,
-          ease: "power3.out",
-          stagger: 0.09,
-          scrollTrigger: { trigger: group, start: "top 82%" },
-        });
+        reveal(
+          cards,
+          group,
+          { y: 56, opacity: 0, rotate: (i) => ((i % 3) - 1) * 2 }, // -2°, 0°, 2° …
+          {
+            y: 0,
+            opacity: 1,
+            rotate: 0,
+            duration: 0.8,
+            ease: "power3.out",
+            stagger: 0.09,
+          },
+        );
       });
 
       gsap.utils.toArray<HTMLElement>("[data-fx='draw']").forEach((el) => {
-        gsap.from(el, {
-          scaleX: 0,
-          transformOrigin: "left center",
-          duration: 1.1,
-          ease: "power2.inOut",
-          scrollTrigger: { trigger: el, start: "top 85%" },
-        });
+        reveal(
+          el,
+          el,
+          { scaleX: 0, transformOrigin: "left center" },
+          { scaleX: 1, duration: 1.1, ease: "power2.inOut" },
+        );
       });
 
       // Ghost numerals drift slowly against the scroll (parallax scrub).
