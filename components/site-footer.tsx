@@ -17,7 +17,7 @@ export async function SiteFooter() {
             <p className="text-muted-foreground mt-4 text-sm">{t("tagline")}</p>
           </div>
 
-          <div className="grid grid-cols-2 gap-10 text-sm sm:gap-16">
+          <div className="grid grid-cols-2 gap-10 text-sm sm:grid-cols-3 sm:gap-16">
             <div>
               <p className="text-muted-foreground/60 text-xs tracking-[0.2em] uppercase">
                 {t("product")}
@@ -53,6 +53,23 @@ export async function SiteFooter() {
                 <li>
                   <a href={SIGNUP_URL} className="text-muted-foreground hover:text-foreground transition-colors">
                     {tNav("startSelling")}
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <p className="text-muted-foreground/60 text-xs tracking-[0.2em] uppercase">
+                {t("legal")}
+              </p>
+              <ul className="mt-4 space-y-2.5">
+                <li>
+                  <a href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
+                    {t("terms")}
+                  </a>
+                </li>
+                <li>
+                  <a href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
+                    {t("privacy")}
                   </a>
                 </li>
               </ul>

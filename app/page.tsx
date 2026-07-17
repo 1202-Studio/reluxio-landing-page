@@ -5,7 +5,6 @@ import { Features } from "@/components/sections/features";
 import { HowItWorks } from "@/components/sections/how-it-works";
 import { Pricing } from "@/components/sections/pricing";
 import { Showcase } from "@/components/sections/showcase";
-import { SocialProof } from "@/components/sections/social-proof";
 import { TrustStrip } from "@/components/sections/trust-strip";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteNav } from "@/components/site-nav";
@@ -20,7 +19,6 @@ export default function Home() {
         <Showcase />
         <Features />
         <HowItWorks />
-        <SocialProof />
         <Pricing />
         <FinalCta />
       </main>

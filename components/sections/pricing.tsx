@@ -73,7 +73,7 @@ export async function Pricing() {
       id="pricing"
       className="relative scroll-mt-20 overflow-hidden border-t border-white/5 py-24 sm:py-32"
     >
-      <GhostNumeral n="05" />
+      <GhostNumeral n="04" />
       <div className="relative mx-auto max-w-6xl px-6">
         <div data-fx="rise" className="section-reveal mx-auto max-w-2xl text-center">
           <h2 className="font-serif text-3xl font-semibold text-balance sm:text-4xl">

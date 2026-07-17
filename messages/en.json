@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Reluxio — Connect. Sell. Ship.",
-    "description": "Reluxio connects small and medium merchants and gives you one place to run your shop — orders, inventory, storefront, and shipping."
+    "description": "Reluxio connects small solo merchants and gives you one place to run your shop — orders, inventory, storefront, and shipping."
   },
   "nav": {
     "product": "Product",
@@ -12,9 +12,9 @@
     "startSelling": "Start selling"
   },
   "hero": {
-    "eyebrow": "For small & medium merchants",
+    "eyebrow": "For small solo merchants",
     "promise": "Connect. Sell. Ship.",
-    "sub": "Reluxio connects small and medium merchants and gives you one place to run your shop — orders, inventory, storefront, and shipping.",
+    "sub": "Reluxio connects small solo merchants and gives you one place to run your shop — orders, inventory, storefront, and shipping.",
     "ctaPrimary": "Start selling",
     "ctaSecondary": "Explore the product",
     "scrollHint": "Scroll"
@@ -73,19 +73,6 @@
       "body": "Share your storefront and manage every order from one dashboard."
     }
   },
-  "proof": {
-    "heading": "Merchants are moving with Reluxio",
-    "statMerchants": "merchants onboarded",
-    "statMerchantsValue": "500+",
-    "statOrders": "orders flowing",
-    "statOrdersValue": "12,000+",
-    "statCarriers": "carriers supported",
-    "statCarriersValue": "6",
-    "quote1": "I used to track orders in three notebooks. Now it's one screen.",
-    "quote1Author": "Minh — second-hand fashion, Hà Nội",
-    "quote2": "Setting up my storefront took one evening. My customers found it the next day.",
-    "quote2Author": "Trang — home goods, Đà Nẵng"
-  },
   "pricing": {
     "heading": "Simple pricing that grows with you",
     "sub": "Start free. Upgrade when your shop is ready for more.",
@@ -126,6 +113,9 @@
     "product": "Product",
     "account": "Account",
     "language": "Language",
-    "copyright": "© {year} Reluxio. All rights reserved."
+    "copyright": "© {year} Reluxio. All rights reserved.",
+    "legal": "Legal",
+    "terms": "Terms of Service",
+    "privacy": "Privacy Policy"
   }
 }

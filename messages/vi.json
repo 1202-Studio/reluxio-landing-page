@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "Reluxio — Kết nối. Bán hàng. Giao hàng.",
-    "description": "Reluxio kết nối các nhà bán hàng vừa và nhỏ, cho bạn một nơi duy nhất để vận hành cửa hàng — đơn hàng, kho hàng, gian hàng online và vận chuyển."
+    "description": "Reluxio kết nối những người bán hàng nhỏ, tự vận hành, cho bạn một nơi duy nhất để vận hành cửa hàng — đơn hàng, kho hàng, gian hàng online và vận chuyển."
   },
   "nav": {
     "product": "Sản phẩm",
@@ -12,9 +12,9 @@
     "startSelling": "Bắt đầu bán hàng"
   },
   "hero": {
-    "eyebrow": "Dành cho nhà bán hàng vừa và nhỏ",
+    "eyebrow": "Dành cho người bán hàng nhỏ, tự vận hành",
     "promise": "Kết nối. Bán hàng. Giao hàng.",
-    "sub": "Reluxio kết nối các nhà bán hàng vừa và nhỏ, cho bạn một nơi duy nhất để vận hành cửa hàng — đơn hàng, kho hàng, gian hàng online và vận chuyển.",
+    "sub": "Reluxio kết nối những người bán hàng nhỏ, tự vận hành, cho bạn một nơi duy nhất để vận hành cửa hàng — đơn hàng, kho hàng, gian hàng online và vận chuyển.",
     "ctaPrimary": "Bắt đầu bán hàng",
     "ctaSecondary": "Khám phá sản phẩm",
     "scrollHint": "Cuộn xuống"
@@ -73,19 +73,6 @@
       "body": "Chia sẻ gian hàng và quản lý mọi đơn hàng từ một bảng điều khiển."
     }
   },
-  "proof": {
-    "heading": "Các nhà bán hàng đang tăng tốc cùng Reluxio",
-    "statMerchants": "nhà bán hàng tham gia",
-    "statMerchantsValue": "500+",
-    "statOrders": "đơn hàng luân chuyển",
-    "statOrdersValue": "12.000+",
-    "statCarriers": "đơn vị vận chuyển",
-    "statCarriersValue": "6",
-    "quote1": "Trước đây tôi ghi đơn vào ba cuốn sổ. Giờ tất cả nằm trên một màn hình.",
-    "quote1Author": "Minh — thời trang second-hand, Hà Nội",
-    "quote2": "Tôi dựng xong gian hàng trong một buổi tối. Hôm sau khách đã tìm thấy.",
-    "quote2Author": "Trang — đồ gia dụng, Đà Nẵng"
-  },
   "pricing": {
     "heading": "Bảng giá đơn giản, lớn cùng cửa hàng của bạn",
     "sub": "Bắt đầu miễn phí. Nâng cấp khi cửa hàng sẵn sàng.",
@@ -126,6 +113,9 @@
     "product": "Sản phẩm",
     "account": "Tài khoản",
     "language": "Ngôn ngữ",
-    "copyright": "© {year} Reluxio. Đã đăng ký bản quyền."
+    "copyright": "© {year} Reluxio. Đã đăng ký bản quyền.",
+    "legal": "Pháp lý",
+    "terms": "Điều khoản sử dụng",
+    "privacy": "Chính sách bảo mật"
   }
 }
