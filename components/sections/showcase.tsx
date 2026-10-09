@@ -12,7 +12,6 @@ import {
 } from "lucide-react";
 import { getTranslations } from "next-intl/server";
 
-import { GhostNumeral } from "@/components/ghost-numeral";
 import { cn } from "@/lib/utils";
 
 /* ---------------------------------------------------------------------------
@@ -320,7 +319,6 @@ export async function Showcase() {
       id="product"
       className="relative scroll-mt-20 overflow-hidden py-24 sm:py-32"
     >
-      <GhostNumeral n="01" />
       <div className="relative mx-auto max-w-6xl px-6">
         <div data-fx="rise" className="section-reveal mx-auto max-w-2xl text-center">
           <h2 className="font-serif text-3xl font-semibold text-balance sm:text-4xl">

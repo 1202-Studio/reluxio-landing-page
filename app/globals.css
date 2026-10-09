@@ -1,3 +1,9 @@
+/* Hallmark · genre: atmospheric · macrostructure: Marquee Hero act + ruled-ledger body
+ * mood: austere-luxury · theme: brand (Reluxio monochrome, zero-chroma oklch)
+ * nav: N9 edge-aligned quiet · footer: Ft2 inline · enrichment: existing WebGL flow (preserved)
+ * audience: small solo merchants (VN) · use: sign up · redesigned: 2026-07-18
+ * pre-emit critique: P4 H5 E4 S4 R5 V4
+ */
 @import "tailwindcss";
 
 /* ---------------------------------------------------------------------------
@@ -43,9 +49,12 @@
   html {
     @apply font-sans;
     color-scheme: dark;
+    /* clip, never hidden: kills sideways scroll without creating a scroll container */
+    overflow-x: clip;
   }
   body {
     @apply bg-background text-foreground;
+    overflow-x: clip;
   }
 }
 
@@ -131,7 +140,8 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
-    animation: reluxio-shimmer 6s linear infinite;
+    /* Two passes on load, then the gradient rests — no infinite shimmer. */
+    animation: reluxio-shimmer 3.5s linear 2;
   }
 }
 
@@ -148,34 +158,6 @@
       animation-timeline: view();
       animation-range: entry 5% entry 38%;
     }
-  }
-}
-
-/* ---------------------------------------------------------------------------
-   Carrier marquee — CSS-only infinite scroll. Two identical copies inside a
-   w-max flex track; reduced-motion swaps back to a static wrapped list.
---------------------------------------------------------------------------- */
-@keyframes reluxio-marquee {
-  to {
-    transform: translateX(-50%);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .animate-marquee {
-    animation: reluxio-marquee 28s linear infinite;
-  }
-  .animate-marquee:hover {
-    animation-play-state: paused;
-  }
-  .marquee-mask {
-    mask-image: linear-gradient(
-      to right,
-      transparent,
-      black 12%,
-      black 88%,
-      transparent
-    );
   }
 }
 

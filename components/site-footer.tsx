@@ -4,85 +4,51 @@ import { Logo } from "@/components/brand/logo";
 import { LocaleSwitcher } from "@/components/locale-switcher";
 import { LOGIN_URL, SIGNUP_URL } from "@/lib/site";
 
+/**
+ * Ft2 inline footer — a one-page site closes with a line, not a sitemap.
+ * Wordmark + tagline, then every destination in a single wrapped row, then the
+ * legal line. The section links the quiet nav dropped live here.
+ */
 export async function SiteFooter() {
   const tNav = await getTranslations("nav");
   const t = await getTranslations("footer");
 
+  const links = [
+    { href: "#features", label: tNav("features") },
+    { href: "#how", label: tNav("how") },
+    { href: "#pricing", label: tNav("pricing") },
+    { href: LOGIN_URL, label: tNav("login") },
+    { href: SIGNUP_URL, label: tNav("startSelling") },
+    { href: "/terms", label: t("terms") },
+    { href: "/privacy", label: t("privacy") },
+  ];
+
   return (
-    <footer className="border-t border-white/5 py-14">
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="flex flex-col justify-between gap-10 sm:flex-row">
-          <div className="max-w-xs">
-            <Logo size={28} />
-            <p className="text-muted-foreground mt-4 text-sm">{t("tagline")}</p>
-          </div>
-
-          <div className="grid grid-cols-2 gap-10 text-sm sm:grid-cols-3 sm:gap-16">
-            <div>
-              <p className="text-muted-foreground/60 text-xs tracking-[0.2em] uppercase">
-                {t("product")}
-              </p>
-              <ul className="mt-4 space-y-2.5">
-                <li>
-                  <a href="#features" className="text-muted-foreground hover:text-foreground transition-colors">
-                    {tNav("features")}
-                  </a>
-                </li>
-                <li>
-                  <a href="#how" className="text-muted-foreground hover:text-foreground transition-colors">
-                    {tNav("how")}
-                  </a>
-                </li>
-                <li>
-                  <a href="#pricing" className="text-muted-foreground hover:text-foreground transition-colors">
-                    {tNav("pricing")}
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-muted-foreground/60 text-xs tracking-[0.2em] uppercase">
-                {t("account")}
-              </p>
-              <ul className="mt-4 space-y-2.5">
-                <li>
-                  <a href={LOGIN_URL} className="text-muted-foreground hover:text-foreground transition-colors">
-                    {tNav("login")}
-                  </a>
-                </li>
-                <li>
-                  <a href={SIGNUP_URL} className="text-muted-foreground hover:text-foreground transition-colors">
-                    {tNav("startSelling")}
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div>
-              <p className="text-muted-foreground/60 text-xs tracking-[0.2em] uppercase">
-                {t("legal")}
-              </p>
-              <ul className="mt-4 space-y-2.5">
-                <li>
-                  <a href="/terms" className="text-muted-foreground hover:text-foreground transition-colors">
-                    {t("terms")}
-                  </a>
-                </li>
-                <li>
-                  <a href="/privacy" className="text-muted-foreground hover:text-foreground transition-colors">
-                    {t("privacy")}
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </div>
+    <footer className="border-t border-white/5 py-12">
+      <div className="mx-auto max-w-6xl space-y-8 px-6">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-baseline sm:gap-6">
+          <Logo size={26} />
+          <p className="text-muted-foreground text-sm">{t("tagline")}</p>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/5 pt-6 sm:flex-row">
-          <p className="text-muted-foreground/60 text-xs">
+        <nav
+          aria-label={t("product")}
+          className="flex flex-wrap items-baseline gap-x-7 gap-y-3 border-t border-white/5 pt-6 text-sm"
+        >
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className="text-muted-foreground hover:text-foreground whitespace-nowrap transition-colors"
+            >
+              {link.label}
+            </a>
+          ))}
+          <span className="text-muted-foreground/60 ml-auto text-xs">
             {t("copyright", { year: new Date().getFullYear() })}
-          </p>
+          </span>
           <LocaleSwitcher />
-        </div>
+        </nav>
       </div>
     </footer>
   );

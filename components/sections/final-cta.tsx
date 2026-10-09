@@ -19,10 +19,9 @@ export async function FinalCta() {
       />
       <div className="texture-grain absolute inset-0 text-white/[0.03]" aria-hidden />
 
-      <div
-        data-fx="rise"
-        className="section-reveal relative mx-auto flex max-w-2xl flex-col items-center gap-6 px-6 text-center"
-      >
+      {/* Static by design — the page's one orchestrated entrance is the
+          showcase; the closing statement is simply there when you arrive. */}
+      <div className="relative mx-auto flex max-w-2xl flex-col items-center gap-6 px-6 text-center">
         <h2 className="font-serif text-4xl font-semibold text-balance sm:text-5xl">
           {t("heading")}
         </h2>
